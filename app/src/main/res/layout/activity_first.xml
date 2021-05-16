@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="First Activity"
+        android:text="@string/first_activity"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="20sp"/>
@@ -26,22 +26,27 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editText"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/secondText"
-        android:layout_marginTop="200dp"
-        android:background="@color/white"
-        android:textColor="@color/black" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_marginTop="25dp"
-        android:text="Send"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerInParent="true">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="25dp"
+            android:text="@string/send"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

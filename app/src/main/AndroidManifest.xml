@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.newapp">
 
     <application
@@ -9,8 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewApp">
-        <activity android:name=".SecondActivity"></activity>
-        <activity android:name=".FirstActivity">
+        <activity
+            android:name=".SecondActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:resizeableActivity="true"
+            android:windowSoftInputMode="adjustResize"
+            tools:targetApi="N" />
+        <activity
+            android:name=".FirstActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:resizeableActivity="true"
+            android:windowSoftInputMode="adjustResize"
+            tools:targetApi="N">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
